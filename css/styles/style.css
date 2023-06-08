@@ -1,0 +1,431 @@
+/*-----------------------------FONTS-------------------------------------------*/
+
+@font-face{
+
+    font-family: "Bronkey";
+    src:url(../fonts/BronkeyPERSONALUSEONLY-Bold.ttf) format("truetype");
+    font-size: normal;
+    font-weight: normal;
+  
+}
+
+@font-face{
+    font-family: "FragmentCore" ;
+    src:url(../fonts/Fragmentcore.ttf) format("truetype");
+    font-style: normal; 
+    font-weight: normal;
+}
+@font-face {
+    font-family: "TypeWritter" ;
+    src: url(../fonts/ELEGANT\ TYPEWRITER\ Bold.ttf) format("truetype");
+    font-style: normal; 
+    font-weight: normal;
+}
+
+/*--------------------------------PONER FONTS A TEXTO---------------------------------*/
+
+h1{
+    font-size: 100px;
+    font-family: "Bronkey";
+    
+}
+h4{
+    font-size: 30px;
+    font-family: "FragmentCore";
+}
+
+strong{
+    font-family: "TypeWritter";
+    font-size: 30px;
+}
+h6{
+    font-size: 20px;
+    font-family: "FragmentCore";
+    display:inline;
+}
+
+/*-----------------------------------------FONDO Y SCROLLBAR-----------------------------------------*/
+body{
+    background-image: url(../media/fondo.jpg);
+    overflow-x:hidden;
+
+    
+}
+body::-webkit-scrollbar{
+    -webkit-appearance: none;
+   
+    
+}
+body:-webkit-scrollbar:vertical{
+    width:20px;
+}
+body::-webkit-scrollbar-track{
+    background:#d1cfdd;
+    
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:greenyellow ;
+    border: 2px solid #ffbf00;
+}
+
+/*---------------------------------------------GRID------------------------------------------------------*/
+
+
+.caja{
+    background-color: antiquewhite;
+    width: 1000px;
+    height: 275px;
+    border: 4px solid black;
+    margin: 20px; 
+    text-align: center;
+    border-radius:50px 50px 50px 50px;
+}
+
+.caja2{
+    background-color: antiquewhite;
+    width: 215px;
+    height: 275px;
+    border: 4px solid black;
+    margin: 20px; 
+    text-align: center;
+    border-radius:25px 25px 25px 25px;
+    
+}
+
+
+#cajas{
+    width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 80% auto;
+        /* background-color: green; */
+        justify-content: space-between;
+}
+
+/*----------------------------PRODUCTO 1------------------------------------*/
+
+#gato{
+width: 275px;
+height: 275px;
+animation-duration: 5s;
+    animation-name: producto1gato;
+    animation-iteration-count: infinite;
+}
+
+
+
+#gato_sorpresa{
+    animation-duration: 5s;
+    animation-name: producto1gato_sorpresa;
+    animation-iteration-count: infinite;
+    width: 250px;
+    height: 350px;
+    left: 500px;
+    top: 300px;
+   
+    position: absolute;
+}
+
+@keyframes producto1gato_sorpresa{
+
+from{
+opacity: 0;
+    
+}
+to{
+    opacity: 100%;
+}
+
+}
+@keyframes producto1gato{
+
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+    }
+    
+}
+
+/*----------------------------PRODUCTO 2------------------------------------*/
+
+#manada{
+    position:absolute;
+    width: 300px;
+    height: 300px;
+    top: 655px;
+    left: 100px;
+    animation-name: manadaanimacion;
+    animation-duration: 5s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes manadaanimacion {
+    from{
+        left:100px;
+    }
+    to{
+        left: 800px;
+    }
+}
+/*----------------------------PRODUCTO 3------------------------------------*/
+#monoloco{
+    position:absolute;
+    width: 300px;
+    height: 300px;
+    left:500px;
+    animation-name: monolocoproducto3;
+    animation-duration: 0.1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes monolocoproducto3 {
+    
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*----------------------------PRODUCTO 4------------------------------------*/
+
+#fantasma{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    top: 1520px;
+    left: 630px;
+    animation-name: fantasma1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#cayendo{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 1320px;
+    animation-name: cayendo1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes cayendo1 {
+    0%{
+        top:1320px;
+        opacity: 100%;
+    }
+    50%{
+        top: 1555px;
+        opacity: 100%;
+    }
+    100%{
+        top: 1555px;
+        opacity: 0%;
+    }
+}
+
+@keyframes fantasma1{
+    0%{
+        opacity: 0%;
+        top:1555px;
+    }
+
+    50%{
+        opacity: 0%;
+        top: 1555px;
+
+    }
+    100%{   
+        opacity:100%;
+        top:1320px;
+
+    }
+}
+
+/*----------------------------PRODUCTO 5------------------------------------*/
+
+#girasol{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 500px;
+    top: 1635px;
+    animation-name: girasol1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}
+
+#sol{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left:500px;
+    top: 1615px;
+    opacity: 0%;
+
+    animation-name: sol1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+
+
+}
+
+@keyframes girasol1 {
+
+    0%{
+        transform:rotate(360deg);
+        
+
+    }
+    25%{
+        
+        transform: rotate(0deg)
+    }
+    50%{
+        transform: rotate(360deg);
+
+    }
+
+    75%{
+      transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+    
+}
+@keyframes sol1 {
+
+    0%{
+        transform:scale(1);
+        opacity:0;
+
+    }
+    25%{
+        
+        transform: scale(1.25);
+        opacity: 20%;
+    }
+    50%{
+        transform:scale(1);
+        opacity: 60%;
+
+    }
+
+    75%{
+      transform: scale(2);
+      opacity: 100%;
+    }
+    100%{
+        transform: scale(3);
+        opacity: 100%;
+    }
+    
+}
+
+/*----------------------------PRODUCTO 6------------------------------------*/
+
+#tiburon{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 100px;
+    animation-name: tiburon1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#pez1{
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    left: 500px;
+    top: 2050px;
+    animation-name: peces;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#pez2{
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    left:600px;
+    top: 2100px;
+    animation-name: pez1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#pez3{
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    left: 500px;
+    top: 2150px;
+    animation-name: peces;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes tiburon1 {
+    from{
+        left: 100px;
+    }
+    
+    to{
+        left: 300px;
+    }
+}
+
+@keyframes peces {
+
+    0%{
+        left: 500px;
+    }
+    10%{
+        left: 490px;
+    }
+    40%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+    
+}
+@keyframes pez1 {
+    from{
+        left: 600px;
+    }
+
+    to{
+
+            left: 900px;
+    }
+    
+}
